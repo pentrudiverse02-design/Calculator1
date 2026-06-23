@@ -1,3 +1,5 @@
+import math
+
 
 class caluculator:
     def __init__(self,x=10,y=2):
@@ -17,6 +19,9 @@ class caluculator:
         self.x=x
     def setY(self,y):
         self.y=y
+    def cos(self):
+        return math.cos(self.imparte())
+
     def menu(self):
         print("Menu")
         print(f"x:${self.x}  y:${self.y}")
@@ -26,6 +31,7 @@ class caluculator:
         print("4.imparte")
         print("5.modifica X")
         print("6.modifica Y")
+        print("7.Cos din x/y")
         a=input()
         match int(a):
             case 1:
@@ -38,9 +44,11 @@ class caluculator:
                 print("impartire",self.imparte())
             case 5:
                 a=input("introdu X:")
-                self.setX(int(a))
+                self.setX(float(a))
             case 6:
-                self.setY(int(input("introdu Y:")))
+                self.setY(float(input("introdu Y:")))
+            case 7:
+                print("cos cu x/y este:",self.cos())
             case _:
                 self.menu()
         self.menu()

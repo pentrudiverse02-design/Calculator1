@@ -20,7 +20,7 @@ class caluculator:
     def setY(self,y):
         self.y=y
     def cos(self):
-        return math.cos(self.imparte())
+        return math.sin(self.imparte())
 
     def menu(self):
         print("Menu")
@@ -31,7 +31,7 @@ class caluculator:
         print("4.imparte")
         print("5.modifica X")
         print("6.modifica Y")
-        print("7.Cos din x/y")
+        print("7.Sin din x/y")
         a=input()
         match int(a):
             case 1:
@@ -48,7 +48,7 @@ class caluculator:
             case 6:
                 self.setY(float(input("introdu Y:")))
             case 7:
-                print("cos cu x/y este:",self.cos())
+                print("sin cu x/y este:",self.cos())
             case _:
                 self.menu()
         self.menu()

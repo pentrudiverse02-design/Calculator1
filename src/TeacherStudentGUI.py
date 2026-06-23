@@ -47,5 +47,7 @@ class caluculator:
 
 
 if __name__=="__main__":
+    print("prima versiune de calculator")
     calu=caluculator()
     calu.menu()
+
